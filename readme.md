@@ -49,6 +49,11 @@ $pdfFile = $compiler->compileToPDF();
 
 ## Troubleshooting
 
+Pour débugger le LaTeX
+```php
+echo $compiler->return;
+```
+
 ##### Permissions:
 
 Verify that the function compileToPDF has the necessary permissions to execute. This is particularly crucial when running under Apache, as the web server must have the appropriate permissions to run external commands.
