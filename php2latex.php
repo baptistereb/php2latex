@@ -42,7 +42,7 @@ class LatexCompiler {
         try {
             $this->return = shell_exec($command);
             shell_exec("rm temp.aux; rm temp.log; rm temp.tex");
-            shell_exec("mv temp.pdf ".$this->path_output."/".uniqid().".pdf");
+            shell_exec("mv temp.pdf ".escapeshellarg($this->path_output."/".uniqid().".pdf"));
             return true;
         } catch (Exception $e) {
             $this->return = 'Exception reçue : '.$e->getMessage();

@@ -33,7 +33,7 @@ $pdfFile = $compiler->compileToPDF();
 Ensure PHP is installed on your system.
 Ensure LaTeX is installed on your system (pdflatex command should be available).
 Then :
-```git
+```bash
 git clone https://github.com/yourusername/latex-compiler.git
 ```
 
