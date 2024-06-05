@@ -1,4 +1,4 @@
-# LaTeX Compiler
+# php2latex
 
 This project is a simple PHP-based LaTeX compiler. It reads a LaTeX template file, allows the addition of content, and compiles the resulting LaTeX code into a PDF.
 
