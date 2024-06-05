@@ -6,7 +6,7 @@ This project is a simple PHP-based LaTeX compiler. It reads a LaTeX template fil
 
 ##### Structure :
 
-latex-compiler/
+latex-compiler/  
 ├── output/             # Directory where PDFs will be saved  
 ├── template.tex        # Your LaTeX template file  
 ├── php2latex.php       # The PHP class file  
