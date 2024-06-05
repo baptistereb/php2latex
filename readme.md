@@ -7,10 +7,10 @@ This project is a simple PHP-based LaTeX compiler. It reads a LaTeX template fil
 ##### Structure :
 
 latex-compiler/
-├── output/             # Directory where PDFs will be saved
-├── template.tex        # Your LaTeX template file
-├── php2latex.php       # The PHP class file
-└── index.php           # Example usage file
+├── output/             # Directory where PDFs will be saved  
+├── template.tex        # Your LaTeX template file  
+├── php2latex.php       # The PHP class file  
+└── index.php           # Example usage file  
 
 ##### Code :
 
@@ -33,7 +33,7 @@ $pdfFile = $compiler->compileToPDF();
 Ensure PHP is installed on your system.
 Ensure LaTeX is installed on your system (pdflatex command should be available).
 Then :
-```bash
+```git
 git clone https://github.com/yourusername/latex-compiler.git
 ```
 
