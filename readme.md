@@ -2,9 +2,27 @@
 
 This project is a simple PHP-based LaTeX compiler. It reads a LaTeX template file, allows the addition of content, and compiles the resulting LaTeX code into a PDF.
 
+## ⚠️ Warning
+> don't use this script with user parameters as input variables.
+> SPECIFICALLY FOR THE NAME OF THE .tex FILE AND THE OUTPUT DIRECTORY BECAUSE IT IS PROBABLY INJECTABLE.
+> These 2 parameters are passed in a php shell_exec. On the other hand, there's no problem with addContents!
+
+## Installation
+Ensure PHP is installed on your system.
+Ensure LaTeX is installed on your system (pdflatex command should be available).
+Then :
+```bash
+git clone https://github.com/yourusername/latex-compiler.git
+```
+
 ## Usage - example
 
-##### Structure :
+### Using template :
+Locate the %begin-content and %end-content markers. This is where your additional LaTeX content will be automatically inserted.
+
+You can customize the rest of the template file to your needs, such as adjusting the document class, adding packages, or including any preamble settings.
+
+### Structure :
 
 php2latex/  
 ├── output/             # Directory where PDFs will be saved  
@@ -12,12 +30,12 @@ php2latex/
 ├── php2latex.php       # The PHP class file  
 └── index.php           # Example usage file  
 
-##### Code :
+### Code :
 
 ```php
 require 'php2latex.php';
 
-// Create an instance of the compiler
+// Create an instance of the compiler (template path, output directory)
 $compiler = new LatexCompiler("./template.tex", "./output");
 
 // Add content to the LaTeX document (LaTeX code in string format)
@@ -27,14 +45,6 @@ $compiler->addContent("content");
 
 // Compile the document to PDF
 $pdfFile = $compiler->compileToPDF();
-```
-
-## Installation
-Ensure PHP is installed on your system.
-Ensure LaTeX is installed on your system (pdflatex command should be available).
-Then :
-```bash
-git clone https://github.com/yourusername/latex-compiler.git
 ```
 
 ## Troubleshooting
